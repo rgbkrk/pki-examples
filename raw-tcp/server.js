@@ -5,6 +5,7 @@ const options = {
   cert: process.env.SERVER_CERT,
   ca: [process.env.CA],
   requestCert: true,
+  rejectUnauthorized: true,
 };
 
 const server = tls.createServer(options, (socket) => {
