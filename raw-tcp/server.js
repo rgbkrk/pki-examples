@@ -9,6 +9,7 @@ const options = {
 };
 
 const server = tls.createServer(options, (socket) => {
+  console.log(socket);
   console.log('server connected',
             socket.authorized ? 'authorized' : 'unauthorized');
   socket.write('Echo server\r\n');
