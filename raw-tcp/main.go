@@ -100,14 +100,12 @@ func main() {
 	key := []byte(os.Getenv("SERVER_KEY"))
 	ca := []byte(os.Getenv("CA"))
 
-	log.Println(string(cert))
-
 	rawAPIServer, err = NewRawAPIServer(cert, key, ca, RawAPIAddr)
 	if err != nil {
 		log.Fatalf("Unable to create the raw API server: %v\n", err)
 	}
 
-	log.Println("Beacon up!")
+	log.Printf("Online at %v!\n", RawAPIAddr)
 	for {
 		var conn net.Conn
 		conn, err = rawAPIServer.Accept()
