@@ -19,27 +19,27 @@ Make sure your `$DOCKER_HOST` is running locally (cert generation requires writi
 You'll be running two processes, a server and a client. In one terminal:
 
 ```
-source sourcery.sh
+source certs.env 
 node raw-tcp/server.js
 ```
 
 In another terminal:
 
 ```
-source sourcery.sh
+source certs.env
 node raw-tcp/cli.js
 ```
 
 ### HTTPS Server
 
 ```
-source sourcery.sh
+source certs.env
 node https/server.js
 ```
 
 In another terminal:
 
 ```
-source sourcery.sh
+source certs.env
 node https/cli.js
 ```
