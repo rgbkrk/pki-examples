@@ -12,7 +12,6 @@ const options = {
   key: process.env.CLIENT_KEY,
   cert: process.env.CLIENT_CERT,
   ca: process.env.CA,
-  requestCert: true,
   rejectUnauthorized: true,
 
   path: '/',
