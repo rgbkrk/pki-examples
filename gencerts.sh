@@ -13,4 +13,4 @@ export KEYMASTER="docker run --rm -v $(pwd)/certificates/:/certificates/ cloudpi
 ${KEYMASTER} ca
 ${KEYMASTER} signed-keypair -n server -h 127.0.0.1 -s IP:127.0.0.1 -p server
 ${KEYMASTER} signed-keypair -n client -h 127.0.0.1 -s IP:127.0.0.1 -p client
-${KEYMASTER} signed-keypair -n remote -h 127.0.0.1 -p server
+${KEYMASTER} signed-keypair -n remote -h 104.130.22.185 -s IP:104.130.22.185  -p server
