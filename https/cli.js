@@ -7,7 +7,7 @@
 const https = require('https');
 
 const options = {
-  host: '104.130.22.185',
+  host: process.env.HOST,
   port: 27001,
   key: process.env.CLIENT_KEY,
   cert: process.env.CLIENT_CERT,
