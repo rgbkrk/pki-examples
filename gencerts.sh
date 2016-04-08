@@ -11,6 +11,5 @@ rm -f certificates/*.srl certificates/*.csr certificates/*.pem
 export KEYMASTER="docker run --rm -v $(pwd)/certificates/:/certificates/ cloudpipe/keymaster"
 
 ${KEYMASTER} ca
-${KEYMASTER} signed-keypair -n server -h 127.0.0.1 -s IP:127.0.0.1 -p server
+${KEYMASTER} signed-keypair -n server -h 127.0.0.1 -s "IP:127.0.0.1,IP:104.130.0.107" -p server
 ${KEYMASTER} signed-keypair -n client -h 127.0.0.1 -s IP:127.0.0.1 -p client
-${KEYMASTER} signed-keypair -n remote -h 104.130.22.185 -s IP:104.130.22.185  -p server
