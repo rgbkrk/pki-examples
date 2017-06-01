@@ -1,4 +1,4 @@
-FROM node:5.10.1-slim
+FROM node:8
 
 ADD server.js /srv/server.js
 
